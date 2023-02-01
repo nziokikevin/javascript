@@ -71,3 +71,22 @@ const companyNames = companies.map(function(company) {
 const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`)
 // having multiple maps.
 const ageMap = ages.map(age => Math.sqrt(age)).map(age => age * 2)
+
+// sort - takes in 2 values and sorts out and array as specified in the conditions.
+// sort companies by their start dates.
+// const sortedCompanies = companies.sort(function(company1, company2) {
+//   if(company1.start > company2.start) {
+//     return 1
+//   } else {
+//     return -1
+//   }
+// })
+
+// arrow function
+const sortedCompanies = companies.sort((c1, c2) => (c1.start > c2.start ? 1 : -1))
+
+// sort ages in ascending order
+const agesAscending = ages.sort((a, b) => a - b)
+
+// sort ages in descending order
+const agesDescending = ages.sort((a, b) => b - a)
