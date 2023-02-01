@@ -1,5 +1,5 @@
 const companies = [
-  { name: "Company One", category: "Finance", start: 1981, end: 2003 },
+  { name: "Company One", category: "Finance", start: 1981, end: 2004 },
   { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
   { name: "Company Three", category: "Auto", start: 1999, end: 2007 },
   { name: "Company Four", category: "Retail", start: 1989, end: 2010 },
@@ -90,3 +90,21 @@ const agesAscending = ages.sort((a, b) => a - b)
 
 // sort ages in descending order
 const agesDescending = ages.sort((a, b) => b - a)
+
+// reduce - sums up the total.
+// for loop
+// let ageSum = 0
+// for(let i = 0; i < ages.length; i++){
+//    ageSum += ages[i]
+// }
+
+// const ageSum = ages.reduce(function(total, age){
+//   return total + age
+// }, 0)
+
+// arrow function
+const ageSum = ages.reduce((total, age) => total + age, 0)
+
+// get total years for all companies
+const totalYears = companies.reduce((total, company) => total + (company.end - company.start), 0)
+
