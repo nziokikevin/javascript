@@ -56,3 +56,18 @@ const eightiesCompanies = companies.filter(company => (company.start >= 1980 && 
 
 // get companies that have lasted 10 years
 const lastedTenYears = companies.filter(company => (company.end - company.start >= 10))
+
+
+// map - iterates through an array and returns a new array with the specified attributes.
+// create an array of company names.
+const companyNames = companies.map(function(company) {
+  return company.name
+})
+
+// const testMap = companies.map(function(company) {
+//   return `${company.name} [${company.start} - ${company.end}]`
+// })
+// arrow function
+const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`)
+// having multiple maps.
+const ageMap = ages.map(age => Math.sqrt(age)).map(age => age * 2)
