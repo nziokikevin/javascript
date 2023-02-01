@@ -13,3 +13,12 @@ const companies = [
 
 const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32]
 
+// for loop
+// for(let i = 0; i < companies.length; i++){
+//   console.log(companies[i])
+// }
+// forEach - takes in a synchronous callback function. The following can be passed to the function; iterator, index and/or the entire array.
+companies.forEach(function(company) {
+  console.log(company)
+})
+
