@@ -40,6 +40,7 @@ companies.forEach(function(company) {
 
 // arrow function
 const canDrink = ages.filter(age => age >= 21)
+// console.log(canDrink)
 
 
 // filter retail companies.
@@ -50,12 +51,15 @@ const canDrink = ages.filter(age => age >= 21)
 // })
 
 const retailCompanies = companies.filter(company => company.category === 'Retail')
+// console.log(retailCompanies)
 
 // get 80s companies
 const eightiesCompanies = companies.filter(company => (company.start >= 1980 && company.start < 1990))
+// console.log(eightiesCompanies)
 
 // get companies that have lasted 10 years
 const lastedTenYears = companies.filter(company => (company.end - company.start >= 10))
+// console.log(lastedTenYears)
 
 
 // map - iterates through an array and returns a new array with the specified attributes.
@@ -63,14 +67,18 @@ const lastedTenYears = companies.filter(company => (company.end - company.start 
 const companyNames = companies.map(function(company) {
   return company.name
 })
+// console.log(companyNames)
 
 // const testMap = companies.map(function(company) {
 //   return `${company.name} [${company.start} - ${company.end}]`
 // })
 // arrow function
 const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`)
+// console.log(testMap)
+
 // having multiple maps.
 const ageMap = ages.map(age => Math.sqrt(age)).map(age => age * 2)
+// console.log(ageMap)
 
 // sort - takes in 2 values and sorts out and array as specified in the conditions.
 // sort companies by their start dates.
@@ -84,12 +92,15 @@ const ageMap = ages.map(age => Math.sqrt(age)).map(age => age * 2)
 
 // arrow function
 const sortedCompanies = companies.sort((c1, c2) => (c1.start > c2.start ? 1 : -1))
+// console.log(sortedCompanies)
 
 // sort ages in ascending order
 const agesAscending = ages.sort((a, b) => a - b)
+// console.log(agesAscending)
 
 // sort ages in descending order
 const agesDescending = ages.sort((a, b) => b - a)
+// console.log(agesDescending)
 
 // reduce - sums up the total.
 // for loop
@@ -104,7 +115,9 @@ const agesDescending = ages.sort((a, b) => b - a)
 
 // arrow function
 const ageSum = ages.reduce((total, age) => total + age, 0)
+// console.log(ageSum)
 
 // get total years for all companies
 const totalYears = companies.reduce((total, company) => total + (company.end - company.start), 0)
+// console.log(totalYears)
 
